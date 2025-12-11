@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: leetcode-dashboard-backend
+    runtime: node
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: NODE_ENV
+        value: production
+      - key: SPREADSHEET_ID
+        sync: false
+      - key: SHEET_NAME
+        value: Real data Leetcode
+      - key: CACHE_TTL
+        value: 30
+      - key: ALLOWED_ORIGINS
+        sync: false
