@@ -1,0 +1,9 @@
+{
+  "name": "leetcode-visualization",
+  "version": "1.0.0",
+  "description": "LeetCode Contest Dashboard with Google Sheets Integration",
+  "type": "module",
+  "dependencies": {
+    "googleapis": "^128.0.0"
+  }
+}

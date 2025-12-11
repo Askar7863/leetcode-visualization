@@ -1,7 +1,11 @@
 import useSWR from 'swr';
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// In production (Vercel), API is on same domain at /api
+// In development, use localhost backend
+const API_BASE_URL = import.meta.env.VITE_API_URL || (
+  import.meta.env.DEV ? 'http://localhost:3001' : ''
+);
 
 const fetcher = async (url) => {
   const response = await axios.get(url);
